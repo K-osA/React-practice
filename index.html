@@ -57,7 +57,9 @@
     function App() {
       const [counter, setCounter] = React.useState(0);
       const handleClick = () => {
-        setCounter(counter + 1);
+        //unsafe
+        //setCounter(counter + 1);
+        setCounter((current) => current + 1);
       };
       return (
         <div>
